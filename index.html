@@ -257,10 +257,19 @@
 
   <script>
     function showDeposit() {
+      const userId = document.getElementById('user-id').value.trim();
+      if (!userId) {
+        alert("Пожалуйста, введите ID аккаунта!");
+        return;
+      }
       // Скрыть форму ввода ID
       document.getElementById('id-form').style.display = 'none';
       // Показать этап депозита
       document.getElementById('deposit-step').style.display = 'block';
+    }
+
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
     }
   </script>
 
