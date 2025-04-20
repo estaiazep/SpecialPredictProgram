@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predict Bot — Игры и заработок</title>
+  <style>
+    :root {
+      --red: #ff0033;
+      --pink: #ff6699;
+      --white: #ffffff;
+      --black: #000000;
+      --gray: #1a1a1a;
+      --gradient: linear-gradient(135deg, var(--red), var(--pink));
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #000000; /* Упростил фон для теста */
+      color: var(--white);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.7);
+      padding: 40px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+    }
+
+    .btn {
+      background: var(--gradient);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 0, 100, 0.5);
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      font-size: 16px;
+      background: #2c2c2c;
+      border: none;
+      color: white;
+    }
+
+    .games-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      animation: slideIn 2s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .game {
+      background: var(--gray);
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 0 10px rgba(255, 0, 100, 0.4);
+      transition: 0.3s;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+    }
+
+    .game h3 {
+      margin-bottom: 10px;
+      color: var(--pink);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: #333;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      color: white;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .popup-btn {
+      margin-top: 20px;
+      background: var(--pink);
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .popup-btn:hover {
+      background: var(--red);
+    }
+
+    .contact-btn {
+      margin-top: 30px;
+      background: #25D366;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-btn:hover {
+      background: #128C7E;
+    }
+
+    @media(max-width: 600px) {
+      input[type="text"] {
+        width: 100%;
+      }
+      .game {
+        width: 90%;
+      }
+    }
+
+    /* New Deposit Section */
+    .deposit-section {
+      display: none;
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 100, 0.5);
+    }
+
+    .deposit-info {
+      font-size: 1.2rem;
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Predict Bot</h1>
+    <p>Автоматический бот для заработка на играх 1xBet</p>
+  </header>
+
+  <div class="container">
+    <h2>🔗 Регистрация</h2>
+    <p>1. Зарегистрируйся по ссылке</p>
+    <p>2. Используй промокод LUCKYBOT777</p>
+    <a href="https://affpa.top/L?tag=d_3301357m_97c_&site=3301357&ad=97&r=registration" class="btn" target="_blank">Регистрация в 1xBet</a>
+
+    <h2 style="margin-top: 40px;">🔐 Ввод ID</h2>
+    <p>2. Введи ID аккаунта после регистрации</p>
+    <form id="id-form" onsubmit="event.preventDefault(); showDeposit();">
+      <input type="text" id="user-id" placeholder="ID аккаунта">
+      <br>
+      <button class="btn" type="submit">Продолжить</button>
+    </form>
+
+    <!-- Этап депозита -->
+    <div id="deposit-step" style="display: none;">
+      <h2>💸 Депозит для начала работы</h2>
+      <p>Для начала работы с ботом необходимо внести депозит в размере 5 USD.</p>
+
+      <div class="amount-box">
+        <h3>Сумма: 5 USD</h3>
+        <p>Это эквивалентно приблизительно <strong>2,300 KZT</strong> по текущему курсу.</p>
+      </div>
+
+      <div class="currency-rate">
+        <p>Курс валюты: 1 USD = 460 KZT</p>
+      </div>
+
+      <!-- Кнопка для перехода по ссылке -->
+      <a href="https://affpa.top/L?tag=d_3301357m_97c_&site=3301357&ad=97&r=registration" class="btn" target="_blank">Пополнить баланс</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Predict Bot | Все права защищены</p>
+  </footer>
+
+  <script>
+    function showDeposit() {
+      // Скрыть форму ввода ID
+      document.getElementById('id-form').style.display = 'none';
+      // Показать этап депозита
+      document.getElementById('deposit-step').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
