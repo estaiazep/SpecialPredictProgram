@@ -250,14 +250,10 @@
         <p>Курс валюты: 1 USD = 460 KZT</p>
       </div>
 
-      <!-- Кнопка для перехода по ссылке -->
-      <a href="https://affpa.top/L?tag=d_3301357m_97c_&site=3301357&ad=97&r=registration" class="btn" target="_blank">Пополнить баланс</a>
+      <button class="btn" onclick="window.location.href='https://t.me/your_bot'">Пополнить баланс</button>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2025 Predict Bot | Все права защищены</p>
-  </footer>
+    <footer>
 
   <script>
     function showDeposit() {
@@ -267,6 +263,47 @@
       document.getElementById('deposit-step').style.display = 'block';
     }
   </script>
+
+    <h2 style="margin-top: 50px;">🎮 Доступные игры</h2>
+    <div class="games-grid">
+      <div class="game">
+        <h3>Mines Hack</h3>
+        <p>Сигналы на игру Mines с точностью 85%</p>
+      </div>
+      <div class="game">
+        <h3>Predict Bot</h3>
+        <p>Алгоритм на базе ИИ для прогнозов</p>
+      </div>
+      <div class="game">
+        <h3>1xBet Автоматизация</h3>
+        <p>Простая схема заработка на платформе</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 50px;">🔥 Преимущества</h2>
+    <p>📈 Доход от 500.000 KZT в день</p>
+    <p>🤖 Стабильные сигналы каждый день</p>
+    <p>💸 Без рисков и сложностей</p>
+    <p>💬 Поддержка 24/7</p>
+
+    <button class="btn" onclick="showPopup()">Получить больше информации</button>
+
+    <a href="https://t.me/ThanawatOfficial" class="contact-btn" target="_blank">Написать в Telegram</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Predict Bot | Все права защищены</p>
+  </footer>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button class="close-popup" onclick="document.getElementById('popup').style.display = 'none'">×</button>
+      <h2>Дополнительная информация</h2>
+      <p>Здесь будет дополнительная информация о боте и процессе работы.</p>
+      <button class="popup-btn" onclick="document.getElementById('popup').style.display = 'none'">Закрыть</button>
+    </div>
+  </div>
 
 </body>
 </html>
